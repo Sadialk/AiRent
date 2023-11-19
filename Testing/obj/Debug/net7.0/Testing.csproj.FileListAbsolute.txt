@@ -154,3 +154,10 @@ D:\Stpp\Testing\obj\Debug\net7.0\refint\Testing.dll
 D:\Stpp\Testing\obj\Debug\net7.0\Testing.pdb
 D:\Stpp\Testing\obj\Debug\net7.0\Testing.genruntimeconfig.cache
 D:\Stpp\Testing\obj\Debug\net7.0\ref\Testing.dll
+D:\Stpp\Testing\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Stpp\Testing\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Stpp\Testing\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Stpp\Testing\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Stpp\Testing\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\Stpp\Testing\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Stpp\Testing\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

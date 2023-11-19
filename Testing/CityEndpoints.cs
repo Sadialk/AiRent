@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using O9d.AspNet.FluentValidation;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text.Json;
 using Testing.Data;
 using Testing.Data.Dtos;
@@ -55,7 +57,7 @@ namespace Testing
                 var city = new City()
                 {
                     CityName = createCityDto.CityName,
-                    Country = createCityDto.Country
+                    Country = createCityDto.Country,
                 };
                 dbContext.cities.Add(city);
                 await dbContext.SaveChangesAsync();

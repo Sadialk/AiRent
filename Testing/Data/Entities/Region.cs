@@ -1,4 +1,6 @@
-﻿using Testing.Data.Entities;
+﻿using System.ComponentModel.DataAnnotations;
+using Testing.Auth.model;
+using Testing.Data.Entities;
 
 namespace Testing.Data.Entities
 {

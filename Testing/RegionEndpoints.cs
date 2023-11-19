@@ -1,5 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using O9d.AspNet.FluentValidation;
+using System.IdentityModel.Tokens.Jwt;
+using System.Net.Http;
+using System.Security.Claims;
 using Testing.Data;
 using Testing.Data.Dtos;
 using Testing.Data.Entities;
@@ -27,7 +31,7 @@ namespace Testing
 
                 return Results.Ok(new RegionDto(region.Id, region.Name, cityId));
             });
-            RegionGroup.MapPost("regions/", async (int cityId, [Validate] CreateRegionDto createRegionDto, AppdbContext dbcontext) =>
+            RegionGroup.MapPost("regions/", async (int cityId, [Validate] CreateRegionDto createRegionDto, HttpContext httpContext, AppdbContext dbcontext) =>
             {
                 var city = await dbcontext.cities.FirstOrDefaultAsync(c => c.Id == cityId); ;
                 if (city == null)
@@ -37,7 +41,7 @@ namespace Testing
                 var region = new Region()
                 {
                     Name = createRegionDto.Name,
-                    City = city
+                    City = city,
                 };
                 dbcontext.regions.Add(region);
                 await dbcontext.SaveChangesAsync();

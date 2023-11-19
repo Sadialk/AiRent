@@ -7,6 +7,17 @@ using System.Runtime.CompilerServices;
 using System.Net;
 using Testing.Data.Dtos;
 using Testing.Data;
+using Microsoft.AspNetCore.Identity;
+using Testing.Auth.model;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.IdentityModel.Tokens.Jwt;
+using Testing.Auth;
+
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +25,29 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<AppdbContext>();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+builder.Services.AddTransient<JwtTokenService>();
+builder.Services.AddScoped<AuthDbSeeder>();
+
+
+builder.Services.AddIdentity<RentUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppdbContext>().AddDefaultTokenProviders();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme; 
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters.ValidAudience = builder.Configuration["Jwt:ValidAudience"];
+    options.TokenValidationParameters.ValidIssuer = builder.Configuration["Jwt:ValidIssuer"];
+    options.TokenValidationParameters.IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]));
+});
+
+builder.Services.AddAuthorization();
+
+
+
 
 var app = builder.Build();
 
@@ -42,6 +76,14 @@ RegionEndpoints.AddRegionApi(RegionGroup);
 var LocationGroup = app.MapGroup("/api/cities/{cityId}/regions/{regionId}").WithValidationFilter();
 LocationEnpoints.AddLocationApi(LocationGroup);
 
+app.AddAuthApi();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+using var scope = app.Services.CreateScope();
+var dbSeeder = scope.ServiceProvider.GetRequiredService<AuthDbSeeder>();
+await dbSeeder.SeedAsync(); 
 
 app.Run();
 
