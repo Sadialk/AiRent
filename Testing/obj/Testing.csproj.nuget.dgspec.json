@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Stpp\\Testing\\Testing.csproj": {}
+    "C:\\Users\\klaid\\Desktop\\UNIGITSTUFF\\AiRent\\Testing\\Testing.csproj": {}
   },
   "projects": {
-    "D:\\Stpp\\Testing\\Testing.csproj": {
+    "C:\\Users\\klaid\\Desktop\\UNIGITSTUFF\\AiRent\\Testing\\Testing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Stpp\\Testing\\Testing.csproj",
+        "projectUniqueName": "C:\\Users\\klaid\\Desktop\\UNIGITSTUFF\\AiRent\\Testing\\Testing.csproj",
         "projectName": "Testing",
-        "projectPath": "D:\\Stpp\\Testing\\Testing.csproj",
+        "projectPath": "C:\\Users\\klaid\\Desktop\\UNIGITSTUFF\\AiRent\\Testing\\Testing.csproj",
         "packagesPath": "C:\\Users\\klaid\\.nuget\\packages\\",
-        "outputPath": "D:\\Stpp\\Testing\\obj\\",
+        "outputPath": "C:\\Users\\klaid\\Desktop\\UNIGITSTUFF\\AiRent\\Testing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\klaid\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,6 +71,10 @@
               "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.11, )"
             },
