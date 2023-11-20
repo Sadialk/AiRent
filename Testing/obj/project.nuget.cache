@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pEo+q1rIfXOhNSTS5tLiJK1J6d3z/Jygrzsul8NIE30/LF9rLEmhBfCjY/S4JwnUJHbhtop2fm2pSY/cZuLavA==",
+  "dgSpecHash": "mdIFSo9aSwoUvGWHi+RqgjcJwlwVho279E+s7F1FCHu+CoP1V5tDfNrTzma27D0OIcO7g+SdPuEtIf46r9idTg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\klaid\\Desktop\\UNIGITSTUFF\\AiRent\\Testing\\Testing.csproj",
+  "projectFilePath": "D:\\Stpp\\Testing\\Testing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\klaid\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\klaid\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -68,8 +68,6 @@
     "C:\\Users\\klaid\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\klaid\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\klaid\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
-    "C:\\Users\\klaid\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
-    "C:\\Users\\klaid\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
     "C:\\Users\\klaid\\.nuget\\packages\\o9d.aspnet.fluentvalidation\\0.1.1\\o9d.aspnet.fluentvalidation.0.1.1.nupkg.sha512",
     "C:\\Users\\klaid\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\klaid\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
